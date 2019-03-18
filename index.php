@@ -28,7 +28,7 @@ require "config.php";
     <header>
         <h1>De Gokkers</h1>
         <nav>
-            <a href="">Login</a>
+            <a href="login.php">Login</a>
             <a href="">Registreer</a>
         </nav>
     </header>
