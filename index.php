@@ -34,8 +34,18 @@ require "config.php";
 </header>
 
 
+<div class="images">
+        <img src="img/DeGokkersRobin.PNG" alt="DeGokkersRobin">
+        <img src="img/DeGokkersJimmy.JPG" alt="DeGokkersJimmy">
+</div>
 
 
+<div class="about">
+    <h2>Over het spel</h2>
+    <P>Het spel ("De Gokkers" of "Day at the races") is een gokspelletje waar je kan gokken op het dier dat je denkt dat er gaat winnen. Dit word gedaan met virtueel geld.
+    Er zijn vier personen die allemaal een startbedrag hebben. Vervolgens kan je gaan wedden op het dier dat jij denkt dat er gaat winnen. Je kan minimaal 5 wedden en maximaal 15.
+    De winnaar krijgt dubbel zijn geld terug. Dus als je 5 heb gewed krijg je 10 terug als je hebt gewonnen.</P>
+</div>
 
 
 
