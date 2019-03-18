@@ -1,5 +1,9 @@
+<?php
+require "config.php";
+?>
+
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -20,11 +24,18 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
 
-        <?php
-        require "config.php";
-        ?>
+<header>
+    <h1>De Gokkers</h1>
+    <nav>
+        <a href="">Login</a>
+        <a href="">Registreer</a>
+    </nav>
+</header>
+
+
+
+
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

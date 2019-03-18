@@ -98,7 +98,17 @@ textarea {
    ========================================================================== */
 
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+nav a{
+    border-style: solid;
+    padding: 10px;
+    border-radius: 3px;
+}
 
 
 
