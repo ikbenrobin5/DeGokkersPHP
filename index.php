@@ -29,7 +29,7 @@ require "config.php";
         <h1>De Gokkers</h1>
         <nav>
             <a href="login.php">Login</a>
-            <a href="">Registreer</a>
+            <a href="register.php">Registreer</a>
         </nav>
     </header>
 

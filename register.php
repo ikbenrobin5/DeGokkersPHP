@@ -3,9 +3,8 @@
  * Created by PhpStorm.
  * User: Robin
  * Date: 18-3-2019
- * Time: 16:18
+ * Time: 16:43
  */
-
 
 ?>
 
@@ -19,7 +18,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <title>Login</title>
+    <title>Registreer</title>
 </head>
 <body>
 
@@ -27,7 +26,7 @@
     <h1>De Gokkers</h1>
     <nav>
         <a href="index.php">Home</a>
-        <a href="login.php">Registreer</a>
+        <a href="login.php">Login</a>
     </nav>
 </header>
 
@@ -39,7 +38,7 @@
         <label for="password">Wachtwoord</label>
         <input type="password" id="password" name="password" placeholder="Wachtwoord">
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Registreer">
     </form>
 </div>
 
