@@ -27,7 +27,7 @@
     <h1>De Gokkers</h1>
     <nav>
         <a href="index.php">Home</a>
-        <a href="login.php">Registreer</a>
+        <a href="register.php">Registreer</a>
     </nav>
 </header>
 
