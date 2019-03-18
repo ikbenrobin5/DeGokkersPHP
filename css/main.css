@@ -96,20 +96,27 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+h1, a{
+    color: black;
+}
 
 header{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: yellow;
 }
 
 nav a{
     border-style: solid;
     padding: 10px;
     border-radius: 3px;
+    text-decoration: none;
 }
 
+body{
+    background-color: #fffac5;
+}
 
 
 
