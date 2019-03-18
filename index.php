@@ -58,7 +58,7 @@ require "config.php";
 
 
     <footer>
-        <p>© Gemaakt door Robin en Jimmy</p>
+        <p>Gemaakt door Robin en Jimmy</p>
     </footer>
 
 
