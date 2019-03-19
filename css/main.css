@@ -100,8 +100,9 @@ h1, a{
     color: black;
 }
 
-body{
+body {
     background-color: #fffac5;
+    font-family: "DejaVu Sans Condensed";
 }
 
 header{
