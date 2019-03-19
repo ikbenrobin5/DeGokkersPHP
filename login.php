@@ -32,7 +32,7 @@
 </header>
 
 <div class="login">
-    <form action="">
+    <form action="" method="post">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" placeholder="E-Mail">
 
