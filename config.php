@@ -7,17 +7,17 @@
  */
 
 
-$dbHost = "localhost";
-$dbName = "degokkersphp";
-$dbUser = "root";
-$dbPassword = "";
+$dbHost = 'localhost';
+$dbUser = 'root';
+$dbPassword = '';
+$dbName = 'degokkersphp';
 
-$dsn= "mysql:host=$dbHost;dbName=$dbName";
+$dsn= "mysql:host=$dbHost;dbname=$dbName";
 $db = new PDO($dsn, $dbUser, $dbPassword);
 
 $db->setAttribute(PDO:: ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
 
 
 //if($db){
-//    echo "Connected to the $dbName database successfully!";
+//   echo "Connected to the $dbName database successfully!";
 //}
