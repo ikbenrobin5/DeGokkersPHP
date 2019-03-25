@@ -45,8 +45,8 @@ $prepare->execute([
     ':password' => $password
 ]);
 
-if ($prepare = true){
+if ($db = true){
     header('Location: index.php');
-}elseif ($prepare = false){
-    header('Location: register.php ');
+}else{
+    header('Location: register.php');
 }
