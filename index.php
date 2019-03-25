@@ -47,8 +47,7 @@ require "config.php";
         De winnaar krijgt dubbel zijn geld terug. Dus als je 5 heb gewed krijg je 10 terug als je hebt gewonnen. Hieronder staat een video over het spelletje.
         Wil je het spelletje downloaden? Maak een profiel aan en log in!</P>
     </div>
-
-
+        
     <div class="video">
         <video width="700" height="400" controls>
             <source src="video/DeGokkersVideo.mp4" type="video/mp4">
