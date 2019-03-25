@@ -61,6 +61,20 @@ session_start();
         </video>
     </div>
 
+
+    <?php
+
+    if (isset($_SESSION['email'])) {
+        echo "
+        <div class='download'>
+            <a href='program/degokkers.exe'>Download DeGokkers van Robin</a>
+            <a href=''>Download Day at the races van Jimmy</a>
+        </div>
+        ";
+    }
+    ?>
+
+
     <footer>
         <p>Gemaakt door Robin en Jimmy</p>
     </footer>

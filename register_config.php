@@ -16,13 +16,14 @@ require 'config.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO profiles ( email, password ) VALUES ( :email, :password)";
 
 $prepare = $db->prepare($sql);
 $prepare->execute([
     ':email' => $email,
-    ':password' => MD5($password)
+    ':password' => $hashed_password
 ]);
 
 header('Location: login.php');

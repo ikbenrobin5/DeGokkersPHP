@@ -39,16 +39,26 @@ require 'config.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM profiles WHERE (email=:email) AND (password=:password)";
+$sql = "SELECT * FROM profiles WHERE (email=:email)";
 $prepare = $db->prepare($sql);
 $prepare->execute([
-    ':email' => $email,
-    ':password' => $password
+    ':email' => $email
 ]);
 
 $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
 if ($result){
-   $_SESSION['email'] = $email;
-   header('Location: index.php');
+
+    //could be >1 row, we just assume one
+    $hashed_password = $result[0]['password'];
+
+    //check password
+    if(password_verify($password, $hashed_password)) {
+       $_SESSION['email'] = $email;
+        header('Location: index.php');
+        exit();
+    }
+
 }
+
+header('Location: login.php');
