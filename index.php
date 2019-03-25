@@ -33,12 +33,10 @@ require "config.php";
         </nav>
     </header>
 
-
     <div class="images">
             <img src="img/DeGokkersRobin.PNG" alt="DeGokkersRobin">
             <img src="img/DeGokkersJimmy.JPG" alt="DeGokkersJimmy">
     </div>
-
 
     <div class="about">
         <h2>Over het spel</h2>
@@ -47,15 +45,12 @@ require "config.php";
         De winnaar krijgt dubbel zijn geld terug. Dus als je 5 heb gewed krijg je 10 terug als je hebt gewonnen. Hieronder staat een video over het spelletje.
         Wil je het spelletje downloaden? Maak een profiel aan en log in!</P>
     </div>
-        
+
     <div class="video">
         <video width="700" height="400" controls>
             <source src="video/DeGokkersVideo.mp4" type="video/mp4">
-
-
         </video>
     </div>
-
 
     <footer>
         <p>Gemaakt door Robin en Jimmy</p>
