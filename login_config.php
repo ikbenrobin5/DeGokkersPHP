@@ -51,3 +51,9 @@ if ($prepare = true){
     header('Location: register.php ');
 }
 
+<<<<<<< Updated upstream
+=======
+}else{
+    header('Location: index.php');
+}
+>>>>>>> Stashed changes
