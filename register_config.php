@@ -22,7 +22,7 @@ $sql = "INSERT INTO profiles ( email, password ) VALUES ( :email, :password)";
 $prepare = $db->prepare($sql);
 $prepare->execute([
     ':email' => $email,
-    ':password' => $password
+    ':password' => MD5($password)
 ]);
 
 header('Location: login.php');

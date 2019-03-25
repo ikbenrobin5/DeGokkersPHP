@@ -1,5 +1,7 @@
 <?php
 require "config.php";
+
+session_start();
 ?>
 
 <!doctype html>
@@ -24,12 +26,19 @@ require "config.php";
         <![endif]-->
 
         <!-- Add your site or application content here -->
-
     <header>
         <h1>De Gokkers</h1>
         <nav>
-            <a href="login.php">Login</a>
-            <a href="register.php">Registreer</a>
+            <?php
+            if (!isset($_SESSION['email'])) {
+                echo "<a href='login.php'>Login</a> ";
+                echo "<a href='register.php''>Registreer</a>";
+            }
+            else
+            {
+                echo "<a href='logout.php'>Uitloggen ". $_SESSION['email']."</a>";
+            }
+            ?>
         </nav>
     </header>
 

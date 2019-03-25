@@ -32,20 +32,23 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 //        echo "Wrong username/Password please try again";
 //    }
 
+session_start();
 
 require 'config.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM profiles WHERE (email=:email)";
+$sql = "SELECT * FROM profiles WHERE (email=:email) AND (password=:password)";
 $prepare = $db->prepare($sql);
 $prepare->execute([
     ':email' => $email,
+    ':password' => $password
 ]);
 
 $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
-if ($result == null){
-   header('Location: registreer.php');
+if ($result){
+   $_SESSION['email'] = $email;
+   header('Location: index.php');
 }
