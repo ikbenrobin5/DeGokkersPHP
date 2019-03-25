@@ -38,10 +38,16 @@ require 'config.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM profiles WHERE email == $email AND password == $password";
+$sql = "SELECT * FROM profiles WHERE (email=:email) AND (password=:password)";
+$prepare = $db->prepare($sql);
+$prepare->execute([
+    ':email' => $email,
+    ':password' => $password
+]);
 
-if ($db->query($sql)){
-
-}else{
-    
+if ($prepare = true){
+    header('Location: index.php');
+}elseif ($prepare = false){
+    header('Location: register.php ');
 }
+
