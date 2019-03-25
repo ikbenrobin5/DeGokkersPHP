@@ -33,10 +33,10 @@
 <div class="login">
     <form action="register_config.php" method="post">
         <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="E-Mail">
+        <input type="email" id="email" name="email" placeholder="E-Mail" required>
 
         <label for="password">Wachtwoord</label>
-        <input type="password" id="password" name="password" placeholder="Wachtwoord">
+        <input type="password" id="password" name="password" placeholder="Wachtwoord" required minlength="7">
 
         <input type="submit" value="Registreer">
     </form>
