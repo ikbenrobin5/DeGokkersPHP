@@ -185,7 +185,20 @@ input[type=submit]:hover {
 }
 
 
-
+@media screen and (max-width: 1143px){
+    .images{
+        flex-direction: column;
+    }
+    .about{
+        width: 56%;
+    }
+    video{
+        width: 500px;
+    }
+    form{
+        margin-right: 5%;
+    }
+}
 
 
 
