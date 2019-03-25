@@ -12,22 +12,22 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     exit;
 }
 
-    //begin van Jimmy's login ding
-    require 'config.php';
-
-    $email = mysqli_real_escape_string($db, $_POST['email']);
-    $password = mysqli_real_escape_string($db, $_POST['password']);
-
-    $password = md5($password);
-
-    $query = "SELECT * FROM profiles WHERE email = '$email' and password = '$password' ";
-    $results = mysqli_query($db, $query);
-
-    if (mysqli_num_rows($results)){
-        $_SESSION['email'] = $email;
-        $_SESSION['succes'] = "Logged in succesfully";
-        header('Location: index.php');
-    }
-    else{
-        echo "Wrong username/Password please try again";
-    }
+//    //begin van Jimmy's login ding
+//    require 'config.php';
+//
+//    $email = mysqli_real_escape_string($db, $_POST['email']);
+//    $password = mysqli_real_escape_string($db, $_POST['password']);
+//
+//    $password = md5($password);
+//
+//    $query = "SELECT * FROM profiles WHERE email = '$email' and password = '$password' ";
+//    $results = mysqli_query($db, $query);
+//
+//    if (mysqli_num_rows($results)){
+//        $_SESSION['email'] = $email;
+//        $_SESSION['succes'] = "Logged in succesfully";
+//        header('Location: index.php');
+//    }
+//    else{
+//        echo "Wrong username/Password please try again";
+//    }
