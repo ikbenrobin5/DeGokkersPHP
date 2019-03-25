@@ -44,3 +44,8 @@ $prepare->execute([
     ':email' => $email,
 ]);
 
+$result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+
+if ($result == null){
+   header('Location: registreer.php');
+}
