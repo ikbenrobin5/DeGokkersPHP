@@ -50,10 +50,3 @@ if ($prepare = true){
 }elseif ($prepare = false){
     header('Location: register.php ');
 }
-
-<<<<<<< Updated upstream
-=======
-}else{
-    header('Location: index.php');
-}
->>>>>>> Stashed changes
