@@ -31,3 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 //    else{
 //        echo "Wrong username/Password please try again";
 //    }
+
+
+require 'config.php';
+
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+$sql = "SELECT * FROM profiles WHERE email == $email AND password == $password";
+
+if ($db->query($sql)){
+
+}else{
+    
+}
