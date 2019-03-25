@@ -51,6 +51,7 @@ require "config.php";
 
     <div class="video">
         <video width="700" height="400" controls>
+            <source src="video/DeGokkersVideo.mp4" type="video/mp4">
 
 
         </video>
