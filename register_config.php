@@ -27,7 +27,6 @@ $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
 if (isset($_POST['voorwaarden'])== 'yes') {
 
-
     if (!$result) {
 
         if (preg_match('/\s/', $password) == false) {
