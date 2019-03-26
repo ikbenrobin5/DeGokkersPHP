@@ -199,6 +199,12 @@ input[type=submit]:hover {
     margin-bottom: 20px;
 }
 
+.algemeen{
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
 
 @media screen and (max-width: 1143px){
     .images{

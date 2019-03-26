@@ -17,29 +17,46 @@ require 'config.php';
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+$querry = "SELECT * FROM profiles WHERE (email=:email)";
+$prepare = $db->prepare($querry);
+$prepare->execute([
+    ':email' => $email
+]);
 
-if (preg_match('/\s/',$password) == false) {
+$result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
-    if (isPartUppercase($password) == false && preg_match('#[0-9]#', $password)) {
+if (isset($_POST['voorwaarden'])== 'yes') {
 
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO profiles ( email, password ) VALUES ( :email, :password)";
+    if (!$result) {
 
-        $prepare = $db->prepare($sql);
-        $prepare->execute([
-            ':email' => $email,
-            ':password' => $hashed_password
-        ]);
+        if (preg_match('/\s/', $password) == false) {
 
-        header('Location: login.php');
+            if (isPartUppercase($password) == false && preg_match('#[0-9]#', $password)) {
+
+                $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+                $sql = "INSERT INTO profiles ( email, password ) VALUES ( :email, :password)";
+
+                $prepare = $db->prepare($sql);
+                $prepare->execute([
+                    ':email' => $email,
+                    ':password' => $hashed_password
+                ]);
+
+                header('Location: login.php');
+            } else {
+                echo 'Je hebt een hoofdletter nodig in je wachtwoord en een nummer.';
+            }
+        } else {
+            echo 'Je mag geen spaties in je wachtwoord hebben';
+        }
     } else {
-        echo 'Je hebt een hoofdletter nodig in je wachtwoord en een nummer.';
+        echo 'Dit email adres bestaat al';
     }
 }else{
-    echo'Je mag geen spaties in je wachtwoord hebben';
+    echo'Ga akkoord met de algemene voorwaarden';
 }
-
 function isPartUppercase($password) {
     if(preg_match("/[A-Z]/", $password)===0) {
         return true;

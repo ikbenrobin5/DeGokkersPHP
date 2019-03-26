@@ -39,6 +39,7 @@
         <input type="password" id="password" name="password" placeholder="Wachtwoord" required minlength="7">
 
         <input type="submit" value="Registreer">
+        <input type="checkbox" name="voorwaarden" value="yes"> Ga akkoord met de <a href="algemenevoorwaarden.php">algemene voorwaarden</a>
     </form>
 </div>
 
