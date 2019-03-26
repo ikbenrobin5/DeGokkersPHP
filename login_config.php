@@ -47,18 +47,22 @@ $prepare->execute([
 
 $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 
-if ($result){
+
+
+if ($result) {
 
     //could be >1 row, we just assume one
     $hashed_password = $result[0]['password'];
 
     //check password
-    if(password_verify($password, $hashed_password)) {
-       $_SESSION['email'] = $email;
+    if (password_verify($password, $hashed_password)) {
+        $_SESSION['email'] = $email;
         header('Location: index.php');
         exit();
     }
 
 }
 
+
 header('Location: login.php');
+
