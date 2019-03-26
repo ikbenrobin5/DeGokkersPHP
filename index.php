@@ -68,7 +68,7 @@ session_start();
         echo "
         <div class='download'>
             <a href='program/degokkers.exe'>Download DeGokkers van Robin</a>
-            <a href='program/dayattheraces'>Download Day at the races van Jimmy</a>
+            <a href='program/dayattheraces.exe'>Download Day at the races van Jimmy</a>
         </div>
         ";
     }
